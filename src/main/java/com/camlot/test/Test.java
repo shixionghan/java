@@ -37,7 +37,7 @@ public class Test {
 	            else  
 	                md5StrBuff.append(Integer.toHexString(0xFF & byteArray[i]));  
 	        }  
-	  //test
+	  //test one
 	        return md5StrBuff.toString();  
 	    }  
 
