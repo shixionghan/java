@@ -1,5 +1,8 @@
 package com.camelot.jedis.util;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +16,7 @@ public class RedisDBTest {
 	RedisDB redisDB;
 	
 	@Test
-	public void testAdd() {
+	public void testAdd() throws FileNotFoundException, IOException {
 		redisDB.addObject("one", "hello");
 	}
 	

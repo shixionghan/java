@@ -2,16 +2,14 @@ package com.camelot.jedis.util;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
-
-import javax.annotation.Resource;
-
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Component;
 
 @Component("redisDB")
 public class RedisDB {
 
-	@Resource
+	@Autowired
 	private RedisTemplate<String, Object> redisTemplate;
 
 	/**
@@ -103,14 +101,14 @@ public class RedisDB {
 	 * @param key
 	 *            hashID
 	 * @param field
-	 *            字段�?	 * @param value
+	 *            字段�?	 * @param value
 	 */
 	public void setHash(String key, String field, String value) {
 		redisTemplate.opsForHash().put(key, field, value);
 	}
 
 	/**
-	 * 根据key和字段�?获取内容�?	 * 
+	 * 根据key和字段�?获取内容�?	 * 
 	 * @param key
 	 * @param field
 	 * @return value 内容
