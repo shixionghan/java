@@ -2,7 +2,6 @@ package com.camelot.jedis.util;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
